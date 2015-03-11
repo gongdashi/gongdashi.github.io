@@ -2,5 +2,10 @@
 layout: default
 title:宫大师
 ---
-<h1>宫大师</h1>
-。。。
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li><span>{{post.date | date_to_string }}</span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+</ul>
