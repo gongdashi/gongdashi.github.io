@@ -5,7 +5,8 @@ layout: default
   <script src="/js/face-min.js"></script>
   <script src="/js/eye-min.js"></script>
   <script src="/js/mouth-min.js"></script>
-<p id="msg">测试你的幸福指数，请选择带有人头像的图片。</p>
+  <title>幸福指数测试|宫大师</title>
+<p id="msg">测试你的幸福指数，请选择带有人头像的图片，尽量选择照片，而不是直接拍摄。</p>
 <style>
   #wrap{
       position: fixed;
@@ -174,7 +175,7 @@ layout: default
       for(i=0;i<inputs.length;i++){
         var input=inputs[i];
         input.onchange=function(e){
-
+          document.getElementById("msg").innerHTML="宫大师正在分析您的照片，请稍后。。。";
           //this.parentElement.getElementsByTagName('img')[0].src=this.value;
           this.parentElement.getElementsByTagName('img')[0].style.display='block';
           this.parentElement.getElementsByClassName("mark")[0].style.display='block';
