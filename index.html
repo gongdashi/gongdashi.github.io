@@ -5,7 +5,7 @@ layout: default
   <script src="/js/face-min.js"></script>
   <script src="/js/eye-min.js"></script>
   <script src="/js/mouth-min.js"></script>
-<p>臉部測試</p>
+<p id="msg">测试你的幸福指数，请选择带有人头像的图片。</p>
 <style>
   #wrap{
       position: fixed;
@@ -241,10 +241,11 @@ layout: default
           });
           if(event.data.length==0){
             //
-            document.title="你传的图片不是人物照片";
+            document.getElementById("msg").innerHTML="你传的图片不是人物照片";
           }else{
-            document.title="我的幸福指數是"+event.data.length/10*100+"%";
+            document.getElementById("msg").innerHTML="我的幸福指數是:"+event.data.length/10*100+"%";
           }
+          document.title="宫大师说我的幸福指數是:"+event.data.length/10*100+"%";
         });
       }
 
