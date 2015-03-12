@@ -107,3 +107,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .os_mac {
     font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3"
 }
+input[type="text"]{
+    -webkit-text-security:disc;
+}
